@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Zach's Kitchen</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap">
+    <link rel="stylesheet" type="text/css" href="app.css">
+    <style>
+        /* Styles for the header */
+        header {
+            background-color: #000; 
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 48px;
+            font-weight: 300;
+        }
+
+        /* Styles for the main content */
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+        section {
+            margin-bottom: 1px;
+        }
+        h2 {
+            margin-top: 0;
+            font-size: 36px;
+            font-weight: 300;
+            color: #000;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            position: relative;
+        }
+        li:before {
+            content: "";
+            background-image: url("checkmark.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            height: 24px;
+            width: 24px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        /* Styles for the form */
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #f9f9f9;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+        label {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        input, textarea {
+            font-size: 18px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 20px;
+            width: 100%;
+            box-sizing: border-box;
+            background-color: #fff;
+            color: #333;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #333;
+        }
+
+        /* Grid layout for images */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+        }
+        .image-grid img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .image-grid p {
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="header-image.jpeg" alt="Zach's Kitchen" class="header-image">
+        <h1>Zach's Kitchen</h1>
+    </header>
+    <main>
+        <section id="approach" class="approach-section">
+            <div class="approach-content">
+                <div class="approach-image">
+                    <img src="approach-image.jpeg" alt="Delicious Meal" id="approach-img">
+                </div>
+                <div class="approach-text">
+                    <h2 class="approach-header">Welcome!</h2>
+                    <p>
+                        Discover the culinary delights of Zach's Kitchen. With over a decade of experience, Chef Zach brings you exquisite dishes that tantalize your taste buds.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <br>
+
+        <section>
+            <h2>Gallery</h2>
+            <ul class="image-grid">
+                <li>
+                    <img src="dish1.jpeg" alt="Dish 1">
+                </li>
+                <li>
+                    <img src="dish2.jpeg" alt="Dish 2">
+                </li>
+                <li>
+                    <img src="dish3.jpeg" alt="Dish 3">
+                </li>
+            </ul>
+            <p>Experience a visual feast with our gallery showcasing some of Chef Zach's signature dishes.</p>
+        </section>
+
+        <div class="contact-section">
+            <h2>Contact Us</h2>
+            <p>Email: zachkitchen@example.com</p>
+            <p>Phone: 123-456-7890</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Zach's Kitchen</p>
+    </footer>
+
+    <script>
+        document.getElementById("approach-img").addEventListener("click", function() {
+            window.open("menu.pdf", "_blank");
+        });
+    </script>
+</body>
+</html>
