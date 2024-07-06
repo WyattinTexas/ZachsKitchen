@@ -3,44 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <title>Zach's Kitchen</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
     <link rel="stylesheet" type="text/css" href="app.css">
     <style>
+        /* Global Styles */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f9f7f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
         /* Styles for the header */
         header {
-            background-color: #000; 
+            background-color: #000;
             color: #fff;
             padding: 20px;
             text-align: center;
         }
-        header h1 {
-            margin: 0;
-            font-size: 48px;
-            font-weight: 300;
+        .header-image {
+            max-width: 500px; /* Increased from 250px to 500px */
+            height: auto; /* Maintain aspect ratio */
         }
 
         /* Styles for the main content */
         main {
             max-width: 800px;
-            margin: 0 auto;
+            margin: 20px auto;
             padding: 20px;
             background-color: #fff;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
             border-radius: 10px;
         }
         section {
-            margin-bottom: 1px;
+            margin-bottom: 40px;
         }
         h2 {
             margin-top: 0;
-            font-size: 36px;
-            font-weight: 300;
+            font-size: 32px;
+            font-weight: 700;
             color: #000;
+            border-bottom: 2px solid #000;
+            padding-bottom: 10px;
         }
         p {
             font-size: 18px;
-            line-height: 1.5;
-            color: #333;
+            line-height: 1.6;
+            color: #555;
         }
         ul {
             list-style-type: none;
@@ -53,13 +63,9 @@
             position: relative;
         }
         li:before {
-            content: "";
-            background-image: url("checkmark.png");
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center center;
-            height: 24px;
-            width: 24px;
+            content: "•";
+            color: #000;
+            font-size: 24px;
             position: absolute;
             left: 0;
             top: 0;
@@ -67,8 +73,8 @@
 
         /* Styles for the form */
         form {
-            max-width: 500px;
-            margin: 0 auto;
+            max-width: 600px;
+            margin: 0 auto 40px auto;
             background-color: #f9f9f9;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -80,23 +86,26 @@
             margin-bottom: 10px;
             color: #333;
         }
-        input, textarea {
+        input, textarea, select {
             font-size: 18px;
             padding: 10px;
             border-radius: 5px;
-            border: none;
+            border: 1px solid #ccc;
             margin-bottom: 20px;
             width: 100%;
             box-sizing: border-box;
             background-color: #fff;
             color: #333;
-            border: 1px solid #ccc;
         }
         input[type="submit"] {
             background-color: #000;
             color: #fff;
             border: none;
             cursor: pointer;
+            padding: 15px;
+            font-size: 18px;
+            border-radius: 5px;
+            width: 100%;
         }
         input[type="submit"]:hover {
             background-color: #333;
@@ -116,12 +125,37 @@
             margin-top: 10px;
             text-align: center;
         }
+
+        /* Footer Styles */
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .social-media {
+            margin-top: 10px;
+        }
+
+        .social-media a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .social-media a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
     <header>
         <img src="header-image.jpeg" alt="Zach's Kitchen" class="header-image">
-        <h1>Zach's Kitchen</h1>
     </header>
     <main>
         <section id="approach" class="approach-section">
@@ -130,15 +164,25 @@
                     <img src="approach-image.jpeg" alt="Delicious Meal" id="approach-img">
                 </div>
                 <div class="approach-text">
-                    <h2 class="approach-header">Welcome!</h2>
+                    <h2 class="approach-header">Welcome to Zach's Kitchen</h2>
                     <p>
-                        Discover the culinary delights of Zach's Kitchen. With over a decade of experience, Chef Zach brings you exquisite dishes that tantalize your taste buds.
+                        We aim to provide the best culinary experience we can. Whether it's getting the simple things right or adding a touch of sophistication, we get the job done.
                     </p>
                 </div>
             </div>
         </section>
 
-        <br>
+        <section>
+            <h2>Menu</h2>
+            <ul>
+                <li><strong>Lasagna:</strong> Classic layered pasta with rich meat sauce and melted cheese.</li>
+                <li><strong>Chicken & Rice:</strong> Tender chicken served over fluffy rice with savory seasonings.</li>
+                <li><strong>Shepard's Pie:</strong> Hearty meat and vegetable filling topped with creamy mashed potatoes.</li>
+                <li><strong>Pot Roast:</strong> Slow-cooked beef with carrots and potatoes in a flavorful gravy.</li>
+                <li><strong>Swedish Meatballs:</strong> Delicious meatballs in a creamy sauce served with lingonberry jam.</li>
+                <li><strong>Sausage & Peppers:</strong> Juicy sausages cooked with vibrant bell peppers and onions.</li>
+            </ul>
+        </section>
 
         <section>
             <h2>Gallery</h2>
@@ -152,18 +196,75 @@
                 <li>
                     <img src="dish3.jpeg" alt="Dish 3">
                 </li>
+                <li>
+                    <img src="dish4.jpeg" alt="Dish 4">
+                </li>
+                <li>
+                    <img src="dish5.jpeg" alt="Dish 5">
+                </li>
+                <li>
+                    <img src="dish6.jpeg" alt="Dish 6">
+                </li>
+                <li>
+                    <img src="dish7.jpeg" alt="Dish 7">
+                </li>
+                <li>
+                    <img src="dish8.jpeg" alt="Dish 8">
+                </li>
+                <li>
+                    <img src="dish9.jpeg" alt="Dish 9">
+                </li>
+                <li>
+                    <img src="dish10.jpeg" alt="Dish 10">
+                </li>
+                <li>
+                    <img src="dish11.jpeg" alt="Dish 11">
+                </li>
+                <li>
+                    <img src="dish12.jpeg" alt="Dish 12">
+                </li>
             </ul>
-            <p>Experience a visual feast with our gallery showcasing some of Chef Zach's signature dishes.</p>
         </section>
 
         <div class="contact-section">
-            <h2>Contact Us</h2>
-            <p>Email: zachkitchen@example.com</p>
-            <p>Phone: 123-456-7890</p>
+            <h2>Catering & Orders Available at:</h2>
+            <p>Email: zachslocalkitchen@gmail.com</p>
+            <p>Phone: 646-460-3364</p>
         </div>
+
+        <section id="order-form">
+            <h2>Order Form</h2>
+            <form action="https://formsubmit.co/zachslocalkitchen@gmail.com" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="servings">How many servings? ($10 per serving):</label>
+                <input type="number" id="servings" name="servings" required>
+
+                <label for="delivery-date">Date of Order Delivery:</label>
+                <input type="date" id="delivery-date" name="delivery-date" required>
+
+                <label for="order-details">Order Details:</label>
+                <textarea id="order-details" name="order-details" rows="5" required></textarea>
+
+                <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you">
+                <input type="hidden" name="_captcha" value="false">
+
+                <input type="submit" value="Submit Order">
+            </form>
+        </section>
     </main>
     <footer>
         <p>&copy; 2024 Zach's Kitchen</p>
+        <div class="social-media">
+            <a href="https://www.instagram.com/zachdiazkitchen/" target="_blank">Instagram</a>
+        </div>
     </footer>
 
     <script>
