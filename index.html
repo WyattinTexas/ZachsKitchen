@@ -71,46 +71,6 @@
             top: 0;
         }
 
-        /* Styles for the form */
-        form {
-            max-width: 600px;
-            margin: 0 auto 40px auto;
-            background-color: #f9f9f9;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            border-radius: 10px;
-        }
-        label {
-            display: block;
-            font-size: 18px;
-            margin-bottom: 10px;
-            color: #333;
-        }
-        input, textarea, select {
-            font-size: 18px;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            margin-bottom: 20px;
-            width: 100%;
-            box-sizing: border-box;
-            background-color: #fff;
-            color: #333;
-        }
-        input[type="submit"] {
-            background-color: #000;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            padding: 15px;
-            font-size: 18px;
-            border-radius: 5px;
-            width: 100%;
-        }
-        input[type="submit"]:hover {
-            background-color: #333;
-        }
-
         /* Grid layout for images */
         .image-grid {
             display: grid;
@@ -150,6 +110,12 @@
 
         .social-media a:hover {
             text-decoration: underline;
+        }
+
+        /* Center the embedded Google Form */
+        .form-container {
+            display: flex;
+            justify-content: center;
         }
     </style>
 </head>
@@ -232,33 +198,9 @@
             <p>Phone: 646-460-3364</p>
         </div>
 
-        <section id="order-form">
-            <h2>Order Form</h2>
-            <form action="https://formsubmit.co/zachslocalkitchen@gmail.com" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="phone">Phone:</label>
-                <input type="tel" id="phone" name="phone" required>
-
-                <label for="servings">How many servings? ($10 per serving):</label>
-                <input type="number" id="servings" name="servings" required>
-
-                <label for="delivery-date">Date of Order Delivery:</label>
-                <input type="date" id="delivery-date" name="delivery-date" required>
-
-                <label for="order-details">Order Details:</label>
-                <textarea id="order-details" name="order-details" rows="5" required></textarea>
-
-                <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you">
-                <input type="hidden" name="_captcha" value="false">
-
-                <input type="submit" value="Submit Order">
-            </form>
-        </section>
+        <div class="form-container">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdaKuMjiGTYcrJtZClukekwyBc85bflimUHD4pPdlc8lPaQWg/viewform?embedded=true" width="640" height="2223" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
     </main>
     <footer>
         <p>&copy; 2024 Zach's Kitchen</p>
